@@ -1,0 +1,30 @@
+{
+  "name": "atividade01ppi",
+  "version": "1.0.0",
+  "description": "Atividade 01 PPI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Breno-Passarela/Atividade01PPi.git"
+  },
+  "keywords": [
+    "HTTP",
+    "Express",
+    "Node",
+    "PPI"
+  ],
+  "author": "Breno Passarela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Breno-Passarela/Atividade01PPi/issues"
+  },
+  "homepage": "https://github.com/Breno-Passarela/Atividade01PPi#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
