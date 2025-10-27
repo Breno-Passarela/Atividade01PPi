@@ -115,14 +115,14 @@ server.get('/reajuste', (req, res) => {
     let errors = [];
 
     if(!idade || !sexo || !salarioBase || !anoContratacao || !matricula) {
-        errors.push("Insira todos os campos para que possamos retornar informações");
+        errors.push("Campos faltantes");
     }
 
     if(idade <= 16) {
         errors.push("A idade deve ser maior que 16 anos");
     }
 
-    if(sexo !== 'M' && sexo !== 'F') {
+    if((sexo !== 'M' && sexo !== 'F') && sexo !== "") {
         errors.push("Sexo inválido");
     }
 
