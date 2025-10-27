@@ -116,38 +116,38 @@ server.get('/reajuste', (req, res) => {
 
     if(!idade || !sexo || !salarioBase || !anoContratacao || !matricula) {
         errors.push("Insira todos os campos para que possamos retornar informações");
-    } else {
-        if(idade <= 16) {
-            errors.push("A idade deve ser maior que 16 anos");
-        }
-    
-        if(sexo !== 'M' && sexo !== 'F') {
-            errors.push("Sexo inválido");
-        }
-    
-        if(isNaN(salarioBase) === "number") {
-            errors.push("O salário deve ser um número real válido");
-        }
-    
-        if(salarioBase <= 1) {
-            errors.push("O salário deve ser maior que R$ 1,00");
-        }
-    
-        if(isNaN(anoContratacao) === "number") {
-            errors.push("O ano de contratação deve ser um número inteiro válido");
-        }
-    
-        if(anoContratacao < 1960) {
-            errors.push("O ano de contratação deve ser um inteiro")
-        }
-    
-        if(!(typeof matricula === "number")) {
-            errors.push("A matricula deve ser um número inteiro válido");
-        }
-    
-        if(matricula <= 0) {
-            errors.push("A matricula deve ser maior que 0")
-        }
+    }
+
+    if(idade <= 16) {
+        errors.push("A idade deve ser maior que 16 anos");
+    }
+
+    if(sexo !== 'M' && sexo !== 'F') {
+        errors.push("Sexo inválido");
+    }
+
+    if(isNaN(salarioBase) === "number") {
+        errors.push("O salário deve ser um número real válido");
+    }
+
+    if(salarioBase <= 1) {
+        errors.push("O salário deve ser maior que R$ 1,00");
+    }
+
+    if(isNaN(anoContratacao) === "number") {
+        errors.push("O ano de contratação deve ser um número inteiro válido");
+    }
+
+    if(anoContratacao < 1960) {
+        errors.push("O ano de contratação deve ser um inteiro")
+    }
+
+    if(!(typeof matricula === "number")) {
+        errors.push("A matricula deve ser um número inteiro válido");
+    }
+
+    if(matricula <= 0) {
+        errors.push("A matricula deve ser maior que 0")
     }
 
     if(errors.length > 0) {
